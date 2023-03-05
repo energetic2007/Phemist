@@ -29,8 +29,6 @@ public class LevelController : MonoBehaviour
             PlayerPrefs.SetInt("levelComplete", _sceneIndex);
             //Invoke("LoadMainMenu", 1f);
             LoadMainMenu();
-          //  Debug.Log("PlayerPrefs в после уровня");
-          //  Debug.Log(PlayerPrefs.GetInt("levelComplete"));
         }
     }
 

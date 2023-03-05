@@ -6,12 +6,7 @@ using UnityEngine.UI;
 public class LevelSelector : MonoBehaviour
 {
     public Button[] levels;
-
-    private void Awake()
-    {
-       // Debug.Log("PlayerPrefs в меню");
-       Debug.Log(PlayerPrefs.GetInt("levelComplete"));
-    }
+    
     private void Start()
     {
         int levelComplete = PlayerPrefs.GetInt("levelComplete", 0);
@@ -33,6 +28,10 @@ public class LevelSelector : MonoBehaviour
 
     public void Reset()
     {
+        for (int i = 0; i < levels.Length; i++)
+        {
+            if (i  > 0) levels[i].interactable = false;
+        }
         PlayerPrefs.DeleteAll();
     }
     public void ExitGame()
