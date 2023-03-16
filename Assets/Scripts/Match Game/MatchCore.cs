@@ -43,7 +43,14 @@ public class MatchCore : MonoBehaviour
             }
         }
     }
-
+    public void TrueTarget()
+    {
+        
+    }
+    public void FalseTarget()
+    {
+        
+    }
     private void Win()
     {
         LevelController.Instance.IsEndGame();

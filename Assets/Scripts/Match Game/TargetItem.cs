@@ -26,16 +26,15 @@ public class TargetItem : MonoBehaviour
         }
         else
         {
-            StartCoroutine(FalseTarget());
+            StartCoroutine(FalseTargetColor());
         }
     }
     
- 
-    private IEnumerator FalseTarget()
+    private IEnumerator FalseTargetColor()
     {
         bg.color = new Color32(255,0,0,255);
         yield return new WaitForSeconds(1f);
         bg.color = new Color32(255,255,255,255);
-        StopCoroutine(FalseTarget());
+        StopCoroutine(FalseTargetColor());
     }
 }
