@@ -9,8 +9,9 @@ public class TargetItem : MonoBehaviour
     private int number;
     [SerializeField]
     private Image bg;
+    public bool isTargetTrue = false;
     
-   // public int TargetNumber => number;
+   //public int TargetNumber => number;
    
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -21,15 +22,16 @@ public class TargetItem : MonoBehaviour
         if (number == matchItem.ItemNumber)
         {
             bg.color = new Color32(0,255,0,255);
+            isTargetTrue = true;
         }
         else
         {
-            
             StartCoroutine(FalseTarget());
         }
-        // LevelController.Instance.IsEndGame();
     }
-    IEnumerator FalseTarget()
+    
+ 
+    private IEnumerator FalseTarget()
     {
         bg.color = new Color32(255,0,0,255);
         yield return new WaitForSeconds(1f);

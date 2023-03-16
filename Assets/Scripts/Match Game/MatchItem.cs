@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class MatchItem : MonoBehaviour
 {
     [SerializeField] 
     private int number;
-
-    [SerializeField]  private Image bg; 
+    [SerializeField]  
+    private Image bg;
     public int ItemNumber => number;
+    
    
    /*
     private void OnTriggerEnter2D(Collider2D col)
