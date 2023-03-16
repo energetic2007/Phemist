@@ -40,4 +40,9 @@ public class LevelController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
