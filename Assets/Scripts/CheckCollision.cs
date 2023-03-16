@@ -7,7 +7,7 @@ public class CheckCollision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("coll");
+     
         LevelController.Instance.IsEndGame();
     }
 }
